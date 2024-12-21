@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="stylesheet" href="./src/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script type="module" src="/src/main.ts"></script>
+  <title>Vite + TS</title>
+</head>
+
+<body>
+  <div id="app">
+    <!--nav bar start-->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top ">
+      <div class="container">
+        <a href="index.html" class="navbar-brand" href="#">RPV Portel</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a id="createvacancy" class="nav-link" href="./createvacancy">CreateVacancy</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Create-head-section">Create</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Share-head-section">Share</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--end -->
+    <!--home section-->
+    <header id="home-section">
+      <div class="dark-overlay">
+        <div class="home-inner">
+          <div class="container">
+            <div class="row">
+              <h3 style="color: white; text-align: center;">
+                WELL COME TO COMING OUR JOB PORTELE.YOU CAN APPLY IN CURRENT JOB OPENING
+              </h3>
+            </div>
+            <div id="vdata" class="mt-3">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title" style="border-bottom: 2px solid #11a1e9; text-align: center;">View Vacancies
+                      Available</h5>
+                      <table class="table table-bordered">
+                        <thead>
+                          <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Requirment</th>
+                            <th>Experience</th>
+                            <th> Qualification</th>
+                            <th>Skills</th>
+                            <th>Action</th>
+                          </tr>
+                        </thead>
+                        <tbody id="vacancydata">
+
+                        </tbody>
+                      </table>
+
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title" style="border-bottom: 2px solid #11a1e9; text-align: center;">View
+                      Application Status</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+            <div id="ApplyForm">
+              <div class="row">
+                <div class="col-md-6" id="ApplyVacancyForm" style="margin-top: 10px;">
+                  <div class="card" style="width: 600px;">
+                    <div class="card-body">
+                        <h5 class="card-title" style="border-bottom: 2px solid #11a1e9; text-align: center;">Apply Vacancy</h5>
+                        <form id="ApplyVacancy">
+                          <input type="hidden" name="vacancyid" class="form-control" id="vacancyid" value="">
+                            <div class="form-group">
+                               <label for="vacancyName">Vacancy Name</label>
+                                <input type="text" name="vacancyName" class="form-control" id="vacancyName" value="" disabled>
+                            </div>
+                            <div class="form-group">
+                              <label for="vacancyName">Candidate Name</label>
+                               <input type="text" name="CandidateName" class="form-control" id="candidateName" value="">
+                           </div>
+                            <div class="form-group">
+                                <label for="Experience">Experience</label>
+                                <input type="number" id="Experience" placeholder="" class="form-control">
+                            </div>
+                            <div class="form-group" style="margin-top: 10px;">
+                              <label for="">Qualification</label>
+                              <input name="Qualification" id="Qualification" value="" class="form-control" >
+                            </div>
+                            <div class="form-group">
+                              <label for="Skill">Skill</label>
+                              <textarea id="Skill" class="form-control"></textarea>
+                          </div>
+                            <div class="form-group" style="margin-top: 10px; text-align: center;">
+                                <button id="vSave"  class="btn btn-primary">Save</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                </div>
+                <div class="col-md-6">
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  
+</body>
+
+</html>
